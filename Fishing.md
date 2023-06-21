@@ -47,6 +47,32 @@
      
      
 ```
+## Стрелки между узлами
+```
+  Команды для создания стрелок:  
+    flowchart TB
+        node1[А] --> node2[/B/]
+        C --- D
+        node3[\c/] -.-> node4[/f\]
+        node5[\c/] ==> node5[/f\]
+        node6((c)) --o node7[/f\]
+        node7((c)) --o node6[/f\]
+        K --x L
+        K --> K
+```
+```mermaid
+    flowchart TB
+        node1[А] --> node2[/B/]
+        C --- D
+        node3[\c/] -.-> node4[/f\]
+        node5[\c/] ==> node5[/f\]
+        node6((c)) --o node7[/f\]
+        node7((c)) --o node6[/f\]
+        K --x L
+        K --> K
+```
+
+
 
 ```mermaid
   graph TD;
