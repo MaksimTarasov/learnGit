@@ -11,6 +11,7 @@
 ~~~
 	touch README.md     - создание файла README.md
 	git add README.md   - добавление файла README.md в индекс
+	git restore --staged <файл>  -Удалить файл из индекса
 ~~~
 
 <h2> Добавление коммита</h2>
@@ -40,5 +41,27 @@
 ~~~
 <h2>Дебаггинг)))</h2>
 > Просмотр логов
->>git log - 
+~~~
+git log - 
 git log --oneline 
+git status
+git show
+
+./git/HEAD  - указано где храниться файл с хэшем
+
+~~~
+<hr>
+
+# Работа с коммитами
+~~~
+    git commit -amend -no--edit             - Изменение последнего коммита, без изменения текста
+    git commit -amend - m "new commit"      - ИЗменение последнего коммита с изменением текста.
+    Убедиться, что файл в staged, и выполнить git commit --amend --no-edit
+    git reset --hard №Хеша                  - откатить коммит к коммиту с №Хеша
+    git restore <file>                        - откат изменений фала file
+    если файл попал в индекс, то нужно сначала убрать файл из индекса
+    (git restore --staged <file>), затем git resore <file> 
+    git diff HASH1 HASH2 - Просмотр коммита
+    git diff --staged показывает, что изменилось в проиндексированных файлах.
+~~~
+
